@@ -1,5 +1,12 @@
 #include "ble-connection.h"
 
+// Defined variables
+// UUID for the Human Interface Device (HID) Service (my keyboard)
+const char* hidServiceUUID = "00001812-0000-1000-8000-00805f9b34fb";
+BLEScan* pBLEScan = nullptr; 
+BLEClient* pClient = BLEDevice::createClient(); 
+bool isConnected = false; 
+
 void initialize()
 {
   Serial.begin(115200);
